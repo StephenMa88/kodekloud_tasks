@@ -1,0 +1,32 @@
+# Kubernetes cheatsheet
+https://kubernetes.io/docs/reference/kubectl/cheatsheet/
+
+# kubectl command line
+https://kubectl.docs.kubernetes.io/references/kubectl/run/
+
+# create a pod
+# to expose port at same time add "--port=8080 --expose" to the end of it.
+kubectl run <name of pod> --image=nginx
+
+# Scale replica sets
+kubectl scale replicaset <name of rs> --replicas=5
+
+# Create deployment
+kubectl create deployment <name of deployment> --image=httpd:2.4-alpine --replicas=3
+
+# Create a service for existing POD
+kubectl expose pod <name of pod> --port=#### --selector=<label> --name <name of service>
+
+# Manually schedule pod
+add nodeName into the yaml file, put it under specs
+
+# labels
+kubectl get pods -L <label name>
+kubectl get all --selector x=y,a=b
+kubectl label nodes node01 color=blue
+
+# To taint
+kubectl taint node node01 spray=mortein:NoSchedule
+
+# to look up how files should be made
+kubectl explain deployments --recursive |less # or > file.txt
