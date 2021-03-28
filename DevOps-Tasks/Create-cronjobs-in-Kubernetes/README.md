@@ -1,4 +1,4 @@
-#Problem
+# Problem
 There are some jobs/tasks that need to be run regularly on different schedules. Currently the Nautilus DevOps team is working on developing some scripts that will be executed on different schedules, but for the time being the team is creating some cron jobs in Kubernetes cluster with some dummy commands (which will be replaced by original scripts later). Create a cronjob as per details given below:
 	1. Create a cronjob named datacenter.
 	2. Set schedule to */8 * * * *.
@@ -8,7 +8,7 @@ There are some jobs/tasks that need to be run regularly on different schedules. 
 	6. Ensure restart policy is OnFailure.
 
 
-#Solution
+# Solution
 vi task.yaml
 
 apiVersion: batch/v1beta1
@@ -32,7 +32,7 @@ spec:
 
 kubectl create -f task.yaml
 
-#To Check
+# To Check
 kubectl get task datacenter
 
 kubectl get jobs --watch

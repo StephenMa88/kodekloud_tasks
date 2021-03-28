@@ -6,7 +6,7 @@ Install git package using yum on Storage server.
 
 After that create a bare repository /opt/blog.git (make sure to use exact name).
 
-#Solution
+# Solution
 sudo yum install git
 
 sudo mkdir /opt/blog.git
