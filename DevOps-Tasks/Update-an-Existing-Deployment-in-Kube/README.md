@@ -44,6 +44,7 @@ kubectl edit deployments.apps nginx-deployment
 ```
 Under Spec > template > spec > containers > 
 Add the last two lines as seen in the picture below.
+![image](https://user-images.githubusercontent.com/29349049/113530597-42d98600-957b-11eb-9891-1f9f00c4d2db.png)
 
 Type :wq to save and close file
 
@@ -59,23 +60,28 @@ and in the annotations
 Type :wq to save and close file
 
 ## To Check
-Two methods.
-	1) When you run the command, you were able to save and exit and not get called back into the file to fix it :)
-Or here are commands you can use to confirm.
+Two methods:
+When you ran the instructions above, you were able to save and exit and not get called back into the file to fix it :)
+Or 
+Here are commands you can use to confirm.
 ```
 kubectl describe service nginx-service |grep -i nodePort
 ```
+![image](https://user-images.githubusercontent.com/29349049/113530609-48cf6700-957b-11eb-8fe7-de69c2456ae0.png)
 
 ```
 kubectl describe deployments.apps |grep -i replicas:
 ```
+![image](https://user-images.githubusercontent.com/29349049/113530615-4b31c100-957b-11eb-9566-9878b7f49123.png)
 
 ```
 kubectl describe deployments.apps |grep -i command -A 5
 ```
+![image](https://user-images.githubusercontent.com/29349049/113530620-4d941b00-957b-11eb-92c6-7819d9c7b4ff.png)
 
 ```
 kubectl describe deployments.apps |grep -i image
 ```
+![image](https://user-images.githubusercontent.com/29349049/113530623-4ff67500-957b-11eb-8029-ea4435d736cb.png)
 
 

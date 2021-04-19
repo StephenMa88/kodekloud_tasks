@@ -54,7 +54,8 @@ sudo git add --all
 sudo git commit -m "test if master can checkin"
 sudo git push origin master
 ```
-You will get an error message as seen below
+You will get an expected error message as seen below
+![image](https://user-images.githubusercontent.com/29349049/113530766-b11e4880-957b-11eb-8d43-7fd69dc96ade.png)
 
 
 

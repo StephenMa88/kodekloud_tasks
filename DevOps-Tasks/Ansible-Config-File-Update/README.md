@@ -9,6 +9,7 @@ On jump host make appropriate changes so that Ansible can use ammar as the defau
 ```
 cat /etc/ansible/ansible.cfg |grep remote_user
 ```
+![image](https://user-images.githubusercontent.com/29349049/113530707-8502c780-957b-11eb-82a6-aacd49d38f75.png)
 
 
 ## replace default with what problem expects
@@ -19,5 +20,6 @@ sudo sed -i 's;#remote_user\ =\ root;remote_user\ =\ ammar;g' /etc/ansible/ansib
 ```
 cat /etc/ansible/ansible.cfg |grep remote_user
 ```
+![image](https://user-images.githubusercontent.com/29349049/113530710-87fdb800-957b-11eb-98c8-db2378b9bccb.png)
 
 
